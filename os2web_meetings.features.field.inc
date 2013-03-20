@@ -853,7 +853,7 @@ function os2web_meetings_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'committee',
+            'vocabulary' => 'os2web_meetings_tax_committee',
             'parent' => '0',
           ),
         ),
@@ -2148,8 +2148,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-committee-field_os2web_meetings_acadrename'.
-  $fields['taxonomy_term-committee-field_os2web_meetings_acadrename'] = array(
+  // Exported field: 'taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_acadrename'.
+  $fields['taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_acadrename'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -2178,7 +2178,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'text',
     ),
     'field_instance' => array(
-      'bundle' => 'committee',
+      'bundle' => 'os2web_meetings_tax_committee',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -2211,8 +2211,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-committee-field_os2web_meetings_date_valid'.
-  $fields['taxonomy_term-committee-field_os2web_meetings_date_valid'] = array(
+  // Exported field: 'taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_date_valid'.
+  $fields['taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_date_valid'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -2242,7 +2242,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'datetime',
     ),
     'field_instance' => array(
-      'bundle' => 'committee',
+      'bundle' => 'os2web_meetings_tax_committee',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -2289,8 +2289,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-committee-field_os2web_meetings_ext_url'.
-  $fields['taxonomy_term-committee-field_os2web_meetings_ext_url'] = array(
+  // Exported field: 'taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_ext_url'.
+  $fields['taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_ext_url'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -2320,7 +2320,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'link_field',
     ),
     'field_instance' => array(
-      'bundle' => 'committee',
+      'bundle' => 'os2web_meetings_tax_committee',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => 'Hvis den taksonomi der bruges findes i en drop down list kan der angives en ekstern url som åbnes i stedet. ',
@@ -2370,8 +2370,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-committee-field_os2web_meetings_commiteeid'.
-  $fields['taxonomy_term-committee-field_os2web_meetings_commiteeid'] = array(
+  // Exported field: 'taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_commiteeid'.
+  $fields['taxonomy_term-os2web_meetings_tax_committee-field_os2web_meetings_commiteeid'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -2387,7 +2387,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'number_integer',
     ),
     'field_instance' => array(
-      'bundle' => 'committee',
+      'bundle' => 'os2web_meetings_tax_committee',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',

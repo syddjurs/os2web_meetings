@@ -1676,7 +1676,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'committee' => 'committee',
+    'os2web_meetings_tax_committee' => 'os2web_meetings_tax_committee',
   );
 
   /* Display: Page */
@@ -2083,11 +2083,11 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator_id'] = 'field_os2web_meetings_committee_tid_op';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator'] = 'field_os2web_meetings_committee_tid_op';
-  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'committee';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'os2web_meetings_tax_committee';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['vocabulary'] = 'committee';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['vocabulary'] = 'os2web_meetings_tax_committee';
   /* Filterkriterie: Addenum */
   $handler->display->display_options['filters']['field_os2web_meetings_addendum_nid']['id'] = 'field_os2web_meetings_addendum_nid';
   $handler->display->display_options['filters']['field_os2web_meetings_addendum_nid']['table'] = 'field_data_field_os2web_meetings_addendum';
@@ -2421,11 +2421,11 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator_id'] = 'field_os2web_meetings_committee_tid_op';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator'] = 'field_os2web_meetings_committee_tid_op';
-  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'committee';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'os2web_meetings_tax_committee';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['vocabulary'] = 'committee';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['vocabulary'] = 'os2web_meetings_tax_committee';
   /* Filterkriterie: Addenum */
   $handler->display->display_options['filters']['field_os2web_meetings_addendum_nid']['id'] = 'field_os2web_meetings_addendum_nid';
   $handler->display->display_options['filters']['field_os2web_meetings_addendum_nid']['table'] = 'field_data_field_os2web_meetings_addendum';

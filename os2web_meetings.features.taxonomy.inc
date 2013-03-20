@@ -9,9 +9,9 @@
  */
 function os2web_meetings_taxonomy_default_vocabularies() {
   return array(
-    'committee' => array(
+    'os2web_meetings_tax_committee' => array(
       'name' => 'Committee',
-      'machine_name' => 'committee',
+      'machine_name' => 'os2web_meetings_tax_committee',
       'description' => 'Udvalg',
       'hierarchy' => '0',
       'module' => 'taxonomy',
