@@ -42,7 +42,7 @@ function os2web_meetings_node_info() {
       'title_label' => t('Titel'),
       'help' => '',
     ),
-    'os2web_meetings_bullet_attachment' => array(
+    'os2web_meetings_bullet_attach' => array(
       'name' => t('Bullet Point Attachment'),
       'base' => 'node_content',
       'description' => t('is an attachment to bullet point'),

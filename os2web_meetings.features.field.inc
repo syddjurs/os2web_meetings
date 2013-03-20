@@ -391,7 +391,7 @@ function os2web_meetings_field_default_fields() {
             'type' => 'none',
           ),
           'target_bundles' => array(
-            'os2web_meetings_bullet_attachment' => 'os2web_meetings_bullet_attachment',
+            'os2web_meetings_bullet_attach' => 'os2web_meetings_bullet_attach',
           ),
         ),
         'handler_submit' => 'Change handler',
@@ -460,8 +460,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-os2web_meetings_bullet_attachment-field_bpa_body'.
-  $fields['node-os2web_meetings_bullet_attachment-field_bpa_body'] = array(
+  // Exported field: 'node-os2web_meetings_bullet_attach-field_bpa_body'.
+  $fields['node-os2web_meetings_bullet_attach-field_bpa_body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -488,7 +488,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'text_long',
     ),
     'field_instance' => array(
-      'bundle' => 'os2web_meetings_bullet_attachment',
+      'bundle' => 'os2web_meetings_bullet_attach',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -540,8 +540,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-os2web_meetings_bullet_attachment-field_bpa_file'.
-  $fields['node-os2web_meetings_bullet_attachment-field_bpa_file'] = array(
+  // Exported field: 'node-os2web_meetings_bullet_attach-field_bpa_file'.
+  $fields['node-os2web_meetings_bullet_attach-field_bpa_file'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -572,7 +572,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'file',
     ),
     'field_instance' => array(
-      'bundle' => 'os2web_meetings_bullet_attachment',
+      'bundle' => 'os2web_meetings_bullet_attach',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -636,8 +636,8 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-os2web_meetings_bullet_attachment-field_bpa_id'.
-  $fields['node-os2web_meetings_bullet_attachment-field_bpa_id'] = array(
+  // Exported field: 'node-os2web_meetings_bullet_attach-field_bpa_id'.
+  $fields['node-os2web_meetings_bullet_attach-field_bpa_id'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -653,7 +653,7 @@ function os2web_meetings_field_default_fields() {
       'type' => 'number_integer',
     ),
     'field_instance' => array(
-      'bundle' => 'os2web_meetings_bullet_attachment',
+      'bundle' => 'os2web_meetings_bullet_attach',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -737,7 +737,7 @@ function os2web_meetings_field_default_fields() {
         'referenceable_types' => array(
           'borger_dk_permalink' => 0,
           'os2web_meetings_bullet' => 0,
-          'os2web_meetings_bullet_attachment' => 0,
+          'os2web_meetings_bullet_attach' => 0,
           'contentpage' => 0,
           'esdh_dokument' => 0,
           'esdh_sag' => 0,
