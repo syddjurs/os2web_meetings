@@ -41,7 +41,6 @@ projects[date][version] = "2.6"
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
 
-
 projects[autocomplete_deluxe][subdir] = "contrib"
 projects[autocomplete_deluxe][version] = "1.0-beta5"
 
@@ -67,7 +66,7 @@ projects[print][subdir] = "contrib"
 projects[print][version] = "1.1"
 
 projects[rules][subdir] = "contrib"
-projects[rules][version] = "2.1"
+projects[rules][version] = "2.2"
 
 projects[views_php][subdir] = "contrib"
 projects[views_php][version] = "1.x-dev"
