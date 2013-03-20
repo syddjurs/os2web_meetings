@@ -760,7 +760,7 @@ function os2web_meetings_field_default_fields() {
           'rotating_image' => 0,
           'selvbetjeningslinks' => 0,
           'speaker_paper' => 0,
-          'spotbox' => 0,
+          'os2web_spotbox_box' => 0,
           'tema' => 0,
           'webform' => 0,
         ),
