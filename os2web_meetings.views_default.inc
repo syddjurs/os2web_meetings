@@ -260,7 +260,7 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $export['os2web_meetings_future_meetings'] = $view;
 
   $view = new view();
-  $view->name = 'os2web_meetings_os2web_meetings_view_bullets';
+  $view->name = 'os2web_meetings_view_bullets';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -355,7 +355,7 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $translatables['os2web_meetings_os2web_meetings_view_bullets'] = array(
+  $translatables['os2web_meetings_view_bullets'] = array(
     t('Master'),
     t('Meeting bullet points'),
     t('mere'),
@@ -368,10 +368,10 @@ print("<div class=\\"indicator-has-notes\\"></div>");
     t('Alle'),
     t('Block'),
   );
-  $export['os2web_meetings_os2web_meetings_view_bullets'] = $view;
+  $export['os2web_meetings_view_bullets'] = $view;
 
   $view = new view();
-  $view->name = 'os2web_meetings_os2web_meetings_meeting_details';
+  $view->name = 'os2web_meetings_meeting_details';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1336,7 +1336,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
     'default' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
-  $translatables['os2web_meetings_os2web_meetings_meeting_details'] = array(
+  $translatables['os2web_meetings_meeting_details'] = array(
     t('Master'),
     t('Mødedetaljer'),
     t('mere'),
@@ -1389,10 +1389,10 @@ echo \'<span class="bullet-point-print-link"></span>\';
     t('Nid'),
     t('System id'),
   );
-  $export['os2web_meetings_os2web_meetings_meeting_details'] = $view;
+  $export['os2web_meetings_meeting_details'] = $view;
 
   $view = new view();
-  $view->name = 'os2web_meetings_os2web_meetings_view_feeds';
+  $view->name = 'os2web_meetings_view_feeds';
   $view->description = 'This is the RSS feeds of meetings';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1557,7 +1557,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   );
   $handler->display->display_options['path'] = 'os2web_meetings_meetings-feed';
   $handler->display->display_options['sitename_title'] = 0;
-  $translatables['os2web_meetings_os2web_meetings_view_feeds'] = array(
+  $translatables['os2web_meetings_view_feeds'] = array(
     t('Master'),
     t('Dagsordner og referater i Syddjurs Kommune'),
     t('mere'),
@@ -1578,10 +1578,10 @@ echo \'<span class="bullet-point-print-link"></span>\';
     t('Alle'),
     t('Feed'),
   );
-  $export['os2web_meetings_os2web_meetings_view_feeds'] = $view;
+  $export['os2web_meetings_view_feeds'] = $view;
 
   $view = new view();
-  $view->name = 'os2web_meetings_os2web_meetings_view_feeds_list';
+  $view->name = 'os2web_meetings_view_feeds_list';
   $view->description = 'Creates links to all feeds';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
@@ -1683,7 +1683,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'os2web_meetings_meeting-feeds-list';
-  $translatables['os2web_meetings_os2web_meetings_view_feeds_list'] = array(
+  $translatables['os2web_meetings_view_feeds_list'] = array(
     t('Master'),
     t('Feeds til opdateringer om dagsordner og referater'),
     t('mere'),
@@ -1704,10 +1704,10 @@ echo \'<span class="bullet-point-print-link"></span>\';
     t('[nothing] / [nothing_1] / [nothing_3]'),
     t('Page'),
   );
-  $export['os2web_meetings_os2web_meetings_view_feeds_list'] = $view;
+  $export['os2web_meetings_view_feeds_list'] = $view;
 
   $view = new view();
-  $view->name = 'os2web_meetings_os2web_meetings_view_search';
+  $view->name = 'os2web_meetings_view_search';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1823,7 +1823,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
-  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_meetings_os2web_meetings_view_search:block_1';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_meetings_view_search:block_1';
   /* Sidefod: Global: View-område */
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
@@ -1977,7 +1977,7 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['header']['view']['id'] = 'view';
   $handler->display->display_options['header']['view']['table'] = 'views';
   $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['view_to_insert'] = 'os2web_meetings_os2web_meetings_view_search:block_3';
+  $handler->display->display_options['header']['view']['view_to_insert'] = 'os2web_meetings_view_search:block_3';
   /* Overskrift: Global: Unfiltered text */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
@@ -1990,12 +1990,12 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
-  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'os2web_meetings_os2web_meetings_view_search:block_2';
+  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'os2web_meetings_view_search:block_2';
   /* Sidefod: Global: View-område */
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
-  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_meetings_os2web_meetings_view_search:block_1';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_meetings_view_search:block_1';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Global: PHP */
@@ -2502,7 +2502,7 @@ return TRUE;
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_meeting_search_status' => 'os2web_meeting_search_status',
   );
-  $translatables['os2web_meetings_os2web_meetings_view_search'] = array(
+  $translatables['os2web_meetings_view_search'] = array(
     t('Master'),
     t('Søg i dagsordener og referater'),
     t('mere'),
@@ -2539,7 +2539,7 @@ return TRUE;
     t('Rediger'),
     t('Fjern'),
   );
-  $export['os2web_meetings_os2web_meetings_view_search'] = $view;
+  $export['os2web_meetings_view_search'] = $view;
 
   $view = new view();
   $view->name = 'os2web_meetings_view_latest';

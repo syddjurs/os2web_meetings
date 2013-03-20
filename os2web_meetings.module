@@ -55,7 +55,7 @@ function os2web_meetings_block_view($delta = '') {
 function _os2web_meetings_get_exposed_filter() {
   //create a view object first, e. g. $view = views_get_view('myViewName');
   //then set the demanded display_id, e. g. $display_id = 'page_1';
-  $view = views_get_view('os2web_meetings_os2web_meetings_view_search');
+  $view = views_get_view('os2web_meetings_view_search');
   $display_id = 'page';
   $view->set_display($display_id);
   $view->init_handlers(); //initialize display handlers
