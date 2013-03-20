@@ -1,22 +1,40 @@
-OS2Web Base Panels
+OS2Web Meetings
 ==============================
 
 Description
 -----------
-This module provides basic panels to your OS2Web project
+This module provides contenttypes and views to display meetings from mm.
 
 Dependencies
 -----------
+- autocomplete_deluxe
+- better_exposed_filters
+- computed_field
 - ctools
-- delta
+- date
+- ds
+- entity
+- entityreference
+- expire
 - features
-- jcarousel
+- file
+- lightbox2
+- link
+- list
 - menu
+- node_reference
+- number
+- options
+- os2web_qbrick
 - page_manager
-- panels_mini
-- panels_node
+- print
+- print_pdf
+- rules
 - strongarm
+- taxonomy
+- text
 - views
+- views_php
 
 Installation
 -----------
