@@ -58,7 +58,7 @@ function os2web_meetings_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:field_committee';
+  $display->title = '%node:field_os2web_meetings_committee';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -82,7 +82,7 @@ function os2web_meetings_default_page_manager_handlers() {
       'url' => '',
       'display' => 'page',
       'context' => array(
-        0 => 'argument_entity_id:node_1.field_bpa_id',
+        0 => 'argument_entity_id:node_1.field_os2web_meetings_bpa_id',
       ),
       'override_title' => 0,
       'override_title_text' => '',
