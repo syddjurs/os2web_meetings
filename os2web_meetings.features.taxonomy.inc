@@ -32,9 +32,9 @@ function os2web_meetings_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'lokation' => array(
+    'os2web_meetings_tax_location' => array(
       'name' => 'Lokation',
-      'machine_name' => 'lokation',
+      'machine_name' => 'os2web_meetings_tax_location',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
@@ -55,9 +55,9 @@ function os2web_meetings_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'meetin_status' => array(
+    'os2web_meetings_tax_status' => array(
       'name' => 'Meeting status',
-      'machine_name' => 'meetin_status',
+      'machine_name' => 'os2web_meetings_tax_status',
       'description' => 'represents the current of the meeting',
       'hierarchy' => '0',
       'module' => 'taxonomy',

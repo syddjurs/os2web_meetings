@@ -1515,14 +1515,14 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-os2web_meetings_meeting-field_os2web_meetings_search_date'.
-  $fields['node-os2web_meetings_meeting-field_os2web_meetings_search_date'] = array(
+  // Exported field: 'node-os2web_meetings_meeting-field_os2web_os2web_meetings_view_search_date'.
+  $fields['node-os2web_meetings_meeting-field_os2web_os2web_meetings_view_search_date'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_os2web_meetings_search_date',
+      'field_name' => 'field_os2web_os2web_meetings_view_search_date',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -1587,7 +1587,7 @@ function os2web_meetings_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_os2web_meetings_search_date',
+      'field_name' => 'field_os2web_os2web_meetings_view_search_date',
       'label' => 'Search meta data',
       'required' => 0,
       'settings' => array(
