@@ -7,7 +7,7 @@ core = 7.x
 
 projects[os2web_qbrick][type] = "module"
 projects[os2web_qbrick][download][type] = "git"
-projects[os2web_qbrick][download][branch] = "master"
+projects[os2web_qbrick][download][branch] = "develop"
 projects[os2web_qbrick][download][url] = "git://github.com/OS2web/os2web_qbrick.git"
 
 ;; Contrib modules below:
