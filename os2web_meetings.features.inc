@@ -34,7 +34,7 @@ function os2web_meetings_views_api() {
  */
 function os2web_meetings_node_info() {
   $items = array(
-    'bullet_point' => array(
+    'os2web_meetings_bullet' => array(
       'name' => t('Bullet Point'),
       'base' => 'node_content',
       'description' => '',
@@ -42,7 +42,7 @@ function os2web_meetings_node_info() {
       'title_label' => t('Titel'),
       'help' => '',
     ),
-    'bullet_point_attachment' => array(
+    'os2web_meetings_bullet_attachment' => array(
       'name' => t('Bullet Point Attachment'),
       'base' => 'node_content',
       'description' => t('is an attachment to bullet point'),
@@ -50,7 +50,7 @@ function os2web_meetings_node_info() {
       'title_label' => t('Titel'),
       'help' => '',
     ),
-    'meeting' => array(
+    'os2web_meetings_meeting' => array(
       'name' => t('Meeting'),
       'base' => 'node_content',
       'description' => '',

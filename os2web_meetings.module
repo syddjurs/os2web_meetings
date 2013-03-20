@@ -7,7 +7,7 @@
 include_once 'os2web_meetings.features.inc';
 
 function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
-  if ($form['#id'] === 'views-exposed-form-meetings-search-page') {
+  if ($form['#id'] === 'views-exposed-form-os2web_meetings_meetings-search-page') {
     $form['committee']['#options']['http://norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5488&filtercontrol48032=5462&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Djurs Mad I/S';
     $form['committee']['#options']['http://www.norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5473&filtercontrol48032=0&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Beredskabskommisionen';
     // Set up a validate function to forward user.
@@ -31,7 +31,7 @@ function os2web_meetings_views_exposed_form_meetings_search_page_validate(&$form
 }
 
 function os2web_meetings_block_info() {
-  $blocks['meeting-search-block'] = array(
+  $blocks['os2web_meetings_meeting-search-block'] = array(
     'info' => 'Dagsordens søgning',
   );
   return $blocks;
@@ -40,7 +40,7 @@ function os2web_meetings_block_info() {
 function os2web_meetings_block_view($delta = '') {
   $block = array();
   switch ($delta) {
-    case 'meeting-search-block':
+    case 'os2web_meetings_meeting-search-block':
       $block['subject'] = t('Search Agendas');
       $block['content'] = _os2web_meetings_get_exposed_filter();
       break;
@@ -55,7 +55,7 @@ function os2web_meetings_block_view($delta = '') {
 function _os2web_meetings_get_exposed_filter() {
   //create a view object first, e. g. $view = views_get_view('myViewName');
   //then set the demanded display_id, e. g. $display_id = 'page_1';
-  $view = views_get_view('meetings_search');
+  $view = views_get_view('os2web_meetings_meetings_search');
   $display_id = 'page';
   $view->set_display($display_id);
   $view->init_handlers(); //initialize display handlers
@@ -101,7 +101,7 @@ function _os2web_meetings_generate_search_data($entity) {
   }
 
   $bps = '';
-  $bpoints = field_get_items($entity_type, $entity, 'field_ref_bullet_points');
+  $bpoints = field_get_items($entity_type, $entity, 'field_ref_os2web_meetings_bullets');
   if (is_array($bpoints)){
     foreach ($bpoints as $bpoint) {
       $node = node_load($bpoint['target_id']);

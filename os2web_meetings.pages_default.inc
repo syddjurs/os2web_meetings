@@ -34,7 +34,7 @@ function os2web_meetings_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'meeting' => 'meeting',
+              'os2web_meetings_meeting' => 'os2web_meetings_meeting',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -65,7 +65,7 @@ function os2web_meetings_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'views';
-    $pane->subtype = 'meeting_details';
+    $pane->subtype = 'os2web_meetings_meeting_details';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
