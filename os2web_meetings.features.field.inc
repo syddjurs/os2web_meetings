@@ -296,7 +296,7 @@ function os2web_meetings_field_default_fields() {
       'module' => 'os2web_qbrick',
       'settings' => array(),
       'translatable' => '0',
-      'type' => 'qbrick_movie',
+      'type' => 'os2web_qbrick_movie',
     ),
     'field_instance' => array(
       'bundle' => 'os2web_meetings_bullet',
@@ -313,14 +313,14 @@ function os2web_meetings_field_default_fields() {
           'label' => 'above',
           'module' => 'os2web_qbrick',
           'settings' => array(),
-          'type' => 'qbrick_movie_simple',
+          'type' => 'os2web_qbrick_movie_simple',
           'weight' => '3',
         ),
         'os2web_meetings_meeting_detail_view' => array(
           'label' => 'above',
           'module' => 'os2web_qbrick',
           'settings' => array(),
-          'type' => 'qbrick_movie_simple',
+          'type' => 'os2web_qbrick_movie_simple',
           'weight' => '3',
         ),
         'related_block' => array(
@@ -347,7 +347,7 @@ function os2web_meetings_field_default_fields() {
         'active' => 0,
         'module' => 'os2web_qbrick',
         'settings' => array(),
-        'type' => 'qbrick_movie_simple',
+        'type' => 'os2web_qbrick_movie_simple',
         'weight' => '4',
       ),
     ),
@@ -1515,14 +1515,14 @@ function os2web_meetings_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-os2web_meetings_meeting-field_os2web_os2web_meetings_view_search_date'.
-  $fields['node-os2web_meetings_meeting-field_os2web_os2web_meetings_view_search_date'] = array(
+  // Exported field: 'node-os2web_meetings_meeting-field_os2web_meetings_searchdata'.
+  $fields['node-os2web_meetings_meeting-field_os2web_meetings_searchdata'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_os2web_os2web_meetings_view_search_date',
+      'field_name' => 'field_os2web_meetings_searchdata',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -1587,7 +1587,7 @@ function os2web_meetings_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_os2web_os2web_meetings_view_search_date',
+      'field_name' => 'field_os2web_meetings_searchdata',
       'label' => 'Search meta data',
       'required' => 0,
       'settings' => array(
@@ -1837,7 +1837,7 @@ function os2web_meetings_field_default_fields() {
       'module' => 'os2web_qbrick',
       'settings' => array(),
       'translatable' => '0',
-      'type' => 'qbrick_movie',
+      'type' => 'os2web_qbrick_movie',
     ),
     'field_instance' => array(
       'bundle' => 'os2web_meetings_meeting',
@@ -1849,14 +1849,14 @@ function os2web_meetings_field_default_fields() {
           'label' => 'above',
           'module' => 'os2web_qbrick',
           'settings' => array(),
-          'type' => 'qbrick_movie_simple',
+          'type' => 'os2web_qbrick_movie_simple',
           'weight' => '4',
         ),
         'os2web_meetings_meeting_detail_view' => array(
           'label' => 'hidden',
           'module' => 'os2web_qbrick',
           'settings' => array(),
-          'type' => 'qbrick_movie_simple',
+          'type' => 'os2web_qbrick_movie_simple',
           'weight' => '3',
         ),
         'related_block' => array(
@@ -1882,7 +1882,7 @@ function os2web_meetings_field_default_fields() {
       'widget' => array(
         'module' => 'os2web_qbrick',
         'settings' => array(),
-        'type' => 'qbrick_movie_simple',
+        'type' => 'os2web_qbrick_movie_simple',
         'weight' => '9',
       ),
     ),

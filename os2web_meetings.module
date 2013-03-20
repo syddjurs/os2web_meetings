@@ -31,7 +31,7 @@ function os2web_meetings_views_exposed_form_os2web_meetings_view_search_page_val
 }
 
 function os2web_meetings_block_info() {
-  $blocks['os2web_meetings_meeting-search-block'] = array(
+  $blocks['meeting-search-block'] = array(
     'info' => 'Dagsordens søgning',
   );
   return $blocks;
@@ -40,7 +40,7 @@ function os2web_meetings_block_info() {
 function os2web_meetings_block_view($delta = '') {
   $block = array();
   switch ($delta) {
-    case 'os2web_meetings_meeting-search-block':
+    case 'meeting-search-block':
       $block['subject'] = t('Search Agendas');
       $block['content'] = _os2web_meetings_get_exposed_filter();
       break;
