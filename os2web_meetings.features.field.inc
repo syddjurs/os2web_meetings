@@ -1213,7 +1213,7 @@ function os2web_meetings_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'lokation',
+            'vocabulary' => 'os2web_meetings_tax_location',
             'parent' => '0',
           ),
         ),
@@ -1629,7 +1629,7 @@ function os2web_meetings_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'meetin_status',
+            'vocabulary' => 'os2web_meetings_tax_status',
             'parent' => '0',
           ),
         ),
