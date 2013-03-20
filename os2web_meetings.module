@@ -7,17 +7,17 @@
 include_once 'os2web_meetings.features.inc';
 
 function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
-  if ($form['#id'] === 'views-exposed-form-meetings-search-page') {
-    $form['committee']['#options']['http://norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5488&filtercontrol48032=5462&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Djurs Mad I/S';
-    $form['committee']['#options']['http://www.norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5473&filtercontrol48032=0&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Beredskabskommisionen';
+  if ($form['#id'] === 'views-exposed-form-os2web_meetings_meetings-search-page') {
+    $form['os2web_meetings_tax_committee']['#options']['http://norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5488&filtercontrol48032=5462&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Djurs Mad I/S';
+    $form['os2web_meetings_tax_committee']['#options']['http://www.norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5473&filtercontrol48032=0&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Beredskabskommisionen';
     // Set up a validate function to forward user.
-    $form['#validate'] = array('os2web_meetings_views_exposed_form_meetings_search_page_validate');
+    $form['#validate'] = array('os2web_meetings_views_exposed_form_os2web_meetings_view_search_page_validate');
   }
 }
 
-function os2web_meetings_views_exposed_form_meetings_search_page_validate(&$form, &$form_state) {
+function os2web_meetings_views_exposed_form_os2web_meetings_view_search_page_validate(&$form, &$form_state) {
   $searchtext = rawurlencode($form_state['values']['search_params']);
-  if (is_numeric($form_state['values']['committee']) || $form_state['values']['committee'] === 'All') {
+  if (is_numeric($form_state['values']['os2web_meetings_tax_committee']) || $form_state['values']['os2web_meetings_tax_committee'] === 'All') {
 
   }
   else {
@@ -25,7 +25,7 @@ function os2web_meetings_views_exposed_form_meetings_search_page_validate(&$form
       'external' => TRUE,
       'absolute' => TRUE,
     );
-    drupal_goto($form_state['values']['committee'] . $searchtext, $options);
+    drupal_goto($form_state['values']['os2web_meetings_tax_committee'] . $searchtext, $options);
   }
   views_exposed_form_validate($form, $form_state);
 }
@@ -55,7 +55,7 @@ function os2web_meetings_block_view($delta = '') {
 function _os2web_meetings_get_exposed_filter() {
   //create a view object first, e. g. $view = views_get_view('myViewName');
   //then set the demanded display_id, e. g. $display_id = 'page_1';
-  $view = views_get_view('meetings_search');
+  $view = views_get_view('os2web_meetings_os2web_meetings_view_search');
   $display_id = 'page';
   $view->set_display($display_id);
   $view->init_handlers(); //initialize display handlers
@@ -74,7 +74,7 @@ function _os2web_meetings_get_exposed_filter() {
 }
 
 /**
- * Helper function for the meetings_search view
+ * Helper function for the os2web_meetings_view_search view
  *
  * @param stdObject $entity
  * @access protected
@@ -85,34 +85,34 @@ function _os2web_meetings_generate_search_data($entity) {
   $entity_type = 'node';
 
 //  $abbr = '';
-//  if (is_array(field_get_items($entity_type, $entity, 'field_meeting_abbr')))
-//    $abbr = ' '.array_pop(array_pop(field_get_items($entity_type, $entity, 'field_meeting_abbr')));
+//  if (is_array(field_get_items($entity_type, $entity, 'field_os2web_meetings_abbr')))
+//    $abbr = ' '.array_pop(array_pop(field_get_items($entity_type, $entity, 'field_os2web_meetings_abbr')));
 
-  $location = field_get_items($entity_type, $entity, 'field_location');
+  $location = field_get_items($entity_type, $entity, 'field_os2web_meetings_location');
   if (is_array($location)){
     $location_term = taxonomy_term_load(array_pop(array_pop($location)));
     $location = ' '.$location_term->name;
   }
 
-  $committee = field_get_items($entity_type, $entity, 'field_committee');
+  $committee = field_get_items($entity_type, $entity, 'field_os2web_meetings_committee');
   if (is_array($committee)){
     $committee_term = taxonomy_term_load(array_pop(array_pop($committee)));
     $committee = ' '.$committee_term->name;
   }
 
   $bps = '';
-  $bpoints = field_get_items($entity_type, $entity, 'field_ref_bullet_points');
+  $bpoints = field_get_items($entity_type, $entity, 'field_os2web_meetings_bullets');
   if (is_array($bpoints)){
     foreach ($bpoints as $bpoint) {
       $node = node_load($bpoint['target_id']);
       $text = strip_tags(check_markup($node->title,'plain_text'));
       $bps .= ' '.$text;
 
-      $bpas = field_get_items($entity_type, $node, 'field_ref_attachment');
+      $bpas = field_get_items($entity_type, $node, 'field_os2web_meetings_attach');
       if (is_array($bpas)){
         foreach ($bpas as $bpa) {
           $node2 = node_load($bpa['target_id']);
-          $body = field_get_items($entity_type, $node2, 'field_bpa_body');
+          $body = field_get_items($entity_type, $node2, 'field_os2web_meetings_bpa_body');
           $text = html_entity_decode(strip_tags(check_markup(array_pop(array_pop($body)),'filtered_html')),0 , 'UTF-8');
           $text = trim(preg_replace('/[\",;:.\'\(\)]/',' ',$text));
           $text = trim(preg_replace('/\s\s+/',' ',$text));
