@@ -13,7 +13,7 @@ function os2web_meetings_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context_4';
+  $handler->name = 'node_view_panel_agenda';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -34,7 +34,7 @@ function os2web_meetings_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'meeting' => 'meeting',
+              'os2web_meetings_meeting' => 'os2web_meetings_meeting',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -45,7 +45,7 @@ function os2web_meetings_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:sektionsforside';
+  $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -58,14 +58,14 @@ function os2web_meetings_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:field_committee';
+  $display->title = '%node:field_os2web_meetings_committee';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'views';
-    $pane->subtype = 'meeting_details';
+    $pane->subtype = 'os2web_meetings_meeting_details';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -82,7 +82,7 @@ function os2web_meetings_default_page_manager_handlers() {
       'url' => '',
       'display' => 'page',
       'context' => array(
-        0 => 'argument_entity_id:node_1.field_bpa_id',
+        0 => 'argument_entity_id:node_1.field_os2web_meetings_bpa_id',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -103,7 +103,7 @@ function os2web_meetings_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context_4'] = $handler;
+  $export['node_view_panel_agenda'] = $handler;
 
   return $export;
 }
