@@ -1,7 +1,7 @@
 name = OS2Web Meetings
 description = Includes content types and views regarding Agenda import and presentation.
 core = 7.x
-package = OS2Web - AcadreMM
+package = OS2Web - Frontend
 php = 5.2.4
 version = 7.x-1.11
 project = os2web_meetings
