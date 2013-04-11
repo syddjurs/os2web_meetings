@@ -33,6 +33,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_php
+dependencies[] = os2web_print_send_to_friend
 datestamp = 1338117520
 features[ctools][] = ds:ds:1
 features[ctools][] = page_manager:pages_default:1
