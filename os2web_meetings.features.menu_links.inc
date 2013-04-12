@@ -10,9 +10,9 @@
 function os2web_meetings_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-indholdsmenu:dagsorden-og-referat
-  $menu_links['menu-indholdsmenu:dagsorden-og-referat'] = array(
-    'menu_name' => 'menu-indholdsmenu',
+  // Exported menu link: menu-contentmenu:dagsorden-og-referat
+  $menu_links['os2web-menu-contentmenu:dagsorden-og-referat'] = array(
+    'menu_name' => 'os2web-menu-contentmenu',
     'link_path' => 'dagsorden-og-referat',
     'router_path' => 'dagsorden-og-referat',
     'link_title' => 'Dagsordner og referater',
