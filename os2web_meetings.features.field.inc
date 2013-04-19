@@ -2323,7 +2323,7 @@ function os2web_meetings_field_default_fields() {
       'bundle' => 'os2web_meetings_tax_committee',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Hvis den taksonomi der bruges findes i en drop down list kan der angives en ekstern url som åbnes i stedet. ',
+      'description' => 'Hvis den taksonomi der bruges findes i en drop down list kan der angives en ekstern url som åbnes i stedet.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -2440,7 +2440,7 @@ function os2web_meetings_field_default_fields() {
   t('File');
   t('Full doc');
   t('HEXColor');
-  t('Hvis den taksonomi der bruges findes i en drop down list kan der angives en ekstern url som åbnes i stedet. ');
+  t('Hvis den taksonomi der bruges findes i en drop down list kan der angives en ekstern url som åbnes i stedet.');
   t('ID');
   t('Lokation');
   t('Meeting ID');
