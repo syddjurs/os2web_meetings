@@ -189,3 +189,13 @@ function _os2web_meetings_strip_words($text) {
     return FALSE;
   }
 }
+
+/**
+ * Implements hook_os2web_help().
+ */
+function os2web_meetings_os2web_help($sections) {
+
+  // Content types.
+  $sections['contenttype'] = t('<p><b>Meetings:</b> Dependent on the system, meetings are often imported by a metting importer, which can communicate with your ESDH.<br />A meeting contains bullets which can contain attachments. These are all imported, and should not be altered directly on site.<br />See the <a href="@url" target="_blank">overview</a> over meetings.</p>', array('@url' => url('dagsorden-og-referat')));
+  return $sections;
+}
