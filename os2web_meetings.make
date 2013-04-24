@@ -18,7 +18,7 @@ projects[os2web_print_send_to_friend][download][url] = "git@github.com:OS2web/os
 projects[os2web_print_send_to_friend][type] = "module"
 projects[os2web_print_send_to_friend][download][type] = "git"
 projects[os2web_print_send_to_friend][download][branch] = "develop"
-projects[os2web_print_send_to_friend][download][url] = "git://github.com/OS2web/os2web_print_send_to_friend.git"
+projects[os2web_print_send_to_friend][download][url] = "git@github.com:OS2web/os2web_print_send_to_friend.git"
 
 ;; Contrib modules below:
 
