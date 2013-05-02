@@ -361,7 +361,7 @@ function os2web_meetings_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_meeting';
   $strongarm->value = array(
-    0 => 'main-menu',
+    0 => 'os2web-main-menu',
   );
   $export['menu_options_meeting'] = $strongarm;
 
@@ -376,28 +376,28 @@ function os2web_meetings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_os2web_meetings_bullet';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_parent_os2web_meetings_bullet'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_os2web_meetings_bullet_attach';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_parent_os2web_meetings_bullet_attach'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_meeting';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_parent_meeting'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_os2web_meeting_search_status';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_parent_os2web_meeting_search_status'] = $strongarm;
 
   $strongarm = new stdClass();
