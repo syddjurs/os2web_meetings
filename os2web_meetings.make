@@ -19,6 +19,11 @@ projects[os2web_print_send_to_friend][download][url] = "https://github.com/OS2we
 
 ; Libraries
 
+libraries[dompdf][download][type] = "git"
+libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf.git"
+libraries[dompdf][download][revision] = "master"
+libraries[dompdf][destination] = "libraries"
+
 ; Contrib modules
 
 ; Features + related
