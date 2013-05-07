@@ -28,7 +28,7 @@ libraries[dompdf][destination] = "libraries"
 
 ; Features + related
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.0-beta2"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
@@ -40,10 +40,10 @@ projects[panels][version] = "3.3"
 
 ; Basic
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 
 projects[views][subdir] = "contrib"
-projects[views][version] = "3.5"
+projects[views][version] = "3.7"
 
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
@@ -76,7 +76,7 @@ projects[print][subdir] = "contrib"
 projects[print][version] = "1.2"
 
 projects[rules][subdir] = "contrib"
-projects[rules][version] = "2.2"
+projects[rules][version] = "2.3"
 
 projects[views_php][subdir] = "contrib"
 projects[views_php][version] = "1.x-dev"
