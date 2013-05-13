@@ -34,6 +34,14 @@ function os2web_meetings_views_api() {
  */
 function os2web_meetings_node_info() {
   $items = array(
+    'os2web_meeting_search_status' => array(
+      'name' => t('Meeting search status'),
+      'base' => 'node_content',
+      'description' => t('Det nyeste element af dette indhold vises på dagsordens søge siden.'),
+      'has_title' => '1',
+      'title_label' => t('Overskrift'),
+      'help' => '',
+    ),
     'os2web_meetings_bullet' => array(
       'name' => t('Bullet Point'),
       'base' => 'node_content',
@@ -56,14 +64,6 @@ function os2web_meetings_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Titel'),
-      'help' => '',
-    ),
-    'os2web_meeting_search_status' => array(
-      'name' => t('Meeting search status'),
-      'base' => 'node_content',
-      'description' => t('Det nyeste element af dette indhold vises på dagsordens søge siden.'),
-      'has_title' => '1',
-      'title_label' => t('Overskrift'),
       'help' => '',
     ),
   );
