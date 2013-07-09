@@ -17,6 +17,9 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
     // Set up a validate function to forward user.
     $form['#validate'] = array('os2web_meetings_views_exposed_form_os2web_meetings_view_search_page_validate');
 
+    $form['from_date']['value']['#date_format'] = 'd-m-Y';
+    $form['to_date']['value']['#date_format'] = 'd-m-Y';
+
     // Add a little js to make the calendar icons clickable.
     $cal_icon = drupal_get_path('theme', variable_get('theme_default', NULL)) . "/images/cal.png";
     $datepicker = 'jQuery(document).ready(function($) {
