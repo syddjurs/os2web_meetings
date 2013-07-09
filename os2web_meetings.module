@@ -23,13 +23,13 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add a little js to make the calendar icons clickable.
     $cal_icon = drupal_get_path('theme', variable_get('theme_default', NULL)) . "/images/cal.png";
     $datepicker = 'jQuery(document).ready(function($) {
-              $( "#edit-from-date-value-datepicker-popup-0" ).datepicker({
+              $("#edit-from-date-value-datepicker-popup-0").datepicker({
                             showOn: "both",
                             buttonImage: "' . $cal_icon . '",
                             buttonImageOnly: true,
                             dateFormat: "dd-mm-yy"
               });
-              $( "#edit-to-date-value-datepicker-popup-0" ).datepicker({
+              $("#edit-to-date-value-datepicker-popup-0").datepicker({
                             showOn: "both",
                             buttonImage: "' . $cal_icon . '",
                             buttonImageOnly: true,
