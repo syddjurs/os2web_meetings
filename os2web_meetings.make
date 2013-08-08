@@ -39,8 +39,8 @@ projects[panels][version] = "3.3"
 
 
 ; Basic
-projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.3"
+# projects[ctools][subdir] = "contrib"
+# projects[ctools][version] = "1.3"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.7"

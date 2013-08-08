@@ -8,6 +8,14 @@
 include_once 'os2web_meetings.features.inc';
 
 /**
+ * Implements hook_init().
+ */
+function os2web_meetings_init(){
+  drupal_add_css(drupal_get_path('module', 'os2web_meetings') . '/css/os2web_meetings.css', array('group' => CSS_THEME, 'every_page' => FALSE));
+  drupal_add_js(drupal_get_path('module', 'os2web_meetings') . '/js/os2web_meetings.js');
+}
+
+/**
  * Implements hook_FORM_alter().
  */
 function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
