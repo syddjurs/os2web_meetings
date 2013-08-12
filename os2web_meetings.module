@@ -13,6 +13,7 @@ include_once 'os2web_meetings.features.inc';
 function os2web_meetings_init(){
   drupal_add_css(drupal_get_path('module', 'os2web_meetings') . '/css/os2web_meetings.css', array('group' => CSS_THEME, 'every_page' => FALSE));
   drupal_add_js(drupal_get_path('module', 'os2web_meetings') . '/js/os2web_meetings.js');
+  drupal_add_library('system', 'ui.datepicker');
 }
 
 /**
@@ -20,8 +21,6 @@ function os2web_meetings_init(){
  */
 function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] === 'views-exposed-form-os2web-meetings-view-search-page') {
-    $form['os2web_meetings_tax_committee']['#options']['http://norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5488&filtercontrol48032=5462&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Djurs Mad I/S';
-    $form['os2web_meetings_tax_committee']['#options']['http://www.norddjurs.dk/%C3%85bne-dagsordener.4803.aspx?doshow4803=1&filtercontrol48031=5473&filtercontrol48032=0&filtercontrol48033=&filtercontrol48034=0&searchword4803='] = 'Beredskabskommisionen';
     // Set up a validate function to forward user.
     $form['#validate'] = array('os2web_meetings_views_exposed_form_os2web_meetings_view_search_page_validate');
 
@@ -30,21 +29,27 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
 
     // Add a little js to make the calendar icons clickable.
     $cal_icon = url(drupal_get_path('theme', variable_get('theme_default', NULL)) . "/images/cal.png");
-    $datepicker = 'jQuery(document).ready(function($) {
-              $("#edit-from-date-value-datepicker-popup-0").datepicker({
-                            showOn: "both",
-                            buttonImage: "' . $cal_icon . '",
-                            buttonImageOnly: true,
-                            dateFormat: "dd-mm-yy"
-              });
-              $("#edit-to-date-value-datepicker-popup-0").datepicker({
-                            showOn: "both",
-                            buttonImage: "' . $cal_icon . '",
-                            buttonImageOnly: true,
-                            dateFormat: "dd-mm-yy"
-              });
-
-    });';
+    $datepicker = '
+      
+      
+      (function ($) {
+        Drupal.behaviors.os2web_meetings = {
+          attach: function(context, settings) {
+                      $("#edit-from-date-value-date").datepicker({
+                                    showOn: "both",
+                                    //buttonImage: "' . $cal_icon . '",
+                                    buttonImageOnly: true,
+                                    dateFormat: "dd-mm-yy"
+                      });
+                      $("#edit-to-date-value-date").datepicker({
+                                    showOn: "both",
+                                    //buttonImage: "' . $cal_icon . '",
+                                    buttonImageOnly: true,
+                                    dateFormat: "dd-mm-yy"
+                      });
+            }
+          }
+        }(jQuery));';
 
     drupal_add_js($datepicker, array(
       'type' => 'inline',
