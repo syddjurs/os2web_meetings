@@ -65,6 +65,7 @@ projects[ds][version] = "2.2"
 
 projects[expire][subdir] = "contrib"
 projects[expire][version] = "1.0-beta1"
+projects[expire][patch][] = "http://drupal.org/files/1668584-fix-undefined-index-language.patch"
 
 projects[lightbox2][subdir] = "contrib"
 projects[lightbox2][version] = "1.0-beta1"
