@@ -22,7 +22,7 @@ projects[os2web_print_send_to_friend][download][url] = "https://github.com/OS2we
 libraries[dompdf][download][type] = "git"
 libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf.git"
 libraries[dompdf][download][revision] = "master"
-libraries[dompdf][destination] = "libraries"
+libraries[dompdf][destination] = "modules/contrib/print"
 
 ; Contrib modules
 
@@ -39,8 +39,8 @@ projects[panels][version] = "3.3"
 
 
 ; Basic
-projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.3"
+# projects[ctools][subdir] = "contrib"
+# projects[ctools][version] = "1.3"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.7"
@@ -65,6 +65,7 @@ projects[ds][version] = "2.2"
 
 projects[expire][subdir] = "contrib"
 projects[expire][version] = "1.0-beta1"
+projects[expire][patch][] = "http://drupal.org/files/1668584-fix-undefined-index-language.patch"
 
 projects[lightbox2][subdir] = "contrib"
 projects[lightbox2][version] = "1.0-beta1"
