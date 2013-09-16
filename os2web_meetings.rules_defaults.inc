@@ -15,7 +15,11 @@ function os2web_meetings_default_rules_configuration() {
       "REQUIRES" : [ "rules", "expire" ],
       "ON" : [ "node_insert" ],
       "IF" : [
-        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "meeting" : "meeting" } } } }
+        { "node_is_of_type" : {
+            "node" : [ "node" ],
+            "type" : { "value" : { "os2web_meetings_meeting" : "os2web_meetings_meeting" } }
+          }
+        }
       ],
       "DO" : [ { "expire_flush_url" : { "urls" : "dagsorden-og-referat" } } ]
     }

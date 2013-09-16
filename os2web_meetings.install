@@ -17,7 +17,7 @@ function os2web_meetings_update_7004(&$sandbox) {
   }
   $nids = db_select('node', 'n')->fields('n', array('nid'))
     ->condition('type', 'os2web_meetings_meeting')
-    ->condition('nid', $sandbox['current_nid'],'>')
+    ->condition('nid', $sandbox['current_nid'], '>')
     ->orderBy('nid', 'ASC')
     ->range(0, 15)
     ->execute()
