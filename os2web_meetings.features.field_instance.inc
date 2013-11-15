@@ -166,13 +166,13 @@ function os2web_meetings_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'options_buttons',
+      'type' => 'entityreference_autocomplete',
       'weight' => 2,
     ),
   );
