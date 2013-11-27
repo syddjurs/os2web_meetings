@@ -2563,13 +2563,6 @@ return TRUE;
       'separator' => '',
       'empty_column' => 0,
     ),
-    'title_1' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
   );
 
   $handler->display->display_options['defaults']['style_options'] = FALSE;
