@@ -2281,6 +2281,7 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['group'] = 1;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator_id'] = 'field_os2web_meetings_date_value_op';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['label'] = 'Møder fra dato';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator'] = 'field_os2web_meetings_date_value_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['identifier'] = 'from_date';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['remember_roles'] = array(
@@ -2302,7 +2303,7 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['group'] = 1;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['operator_id'] = 'field_os2web_meetings_date_value2_op';
-  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['label'] = 'Til';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['label'] = 'Til dato';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['operator'] = 'field_os2web_meetings_date_value2_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['identifier'] = 'to_date';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['remember_roles'] = array(
@@ -2348,6 +2349,7 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator_id'] = 'field_os2web_meetings_committee_tid_op';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['label'] = 'Vælg hvilket udvalg du vil se dagsordner og referater fra.';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator'] = 'field_os2web_meetings_committee_tid_op';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'os2web_meetings_tax_committee';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['remember_roles'] = array(
@@ -2851,7 +2853,9 @@ return TRUE;
     t('<div class="help-button" title="Help text goes here"></div>'),
     t('Avanceret søgning'),
     t('<div class="meetings-advanced-search-link">Du kan søge efter fritekst <a href="/dagsorden-og-referat-avanceret" title="Advanceret søgning">her</a></div>'),
-    t('Til'),
+    t('Møder fra dato'),
+    t('Til dato'),
+    t('Vælg hvilket udvalg du vil se dagsordner og referater fra.'),
     t('Kommende'),
     t('<div class="help-button" title="Seneste møder i alle udvalg med publicerede referater"></div>'),
     t('Kommende møder med publicerede dagsordner'),
