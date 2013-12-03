@@ -276,7 +276,11 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '21600';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -1594,7 +1598,11 @@ echo \'<span class="bullet-point-print-link"></span>\';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -1947,7 +1955,7 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'allow_secondary' => 0,
-      'secondary_label' => 'Avancerede indstillinger',
+      'secondary_label' => 'Advanced options',
     ),
     'field_os2web_meetings_date_value' => array(
       'bef_format' => 'default',
@@ -2275,7 +2283,17 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator_id'] = 'field_os2web_meetings_date_value_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['operator'] = 'field_os2web_meetings_date_value_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['identifier'] = 'from_date';
-  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['form_type'] = 'date_text';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    7 => 0,
+    3 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['default_date'] = 'now -1 month';
   /* Filterkriterie: Indhold: Date - slutdato (field_os2web_meetings_date:value2) */
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['id'] = 'field_os2web_meetings_date_value2';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['table'] = 'field_data_field_os2web_meetings_date';
@@ -2287,13 +2305,45 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['label'] = 'Til';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['operator'] = 'field_os2web_meetings_date_value2_op';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['identifier'] = 'to_date';
-  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['form_type'] = 'date_text';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    7 => 0,
+    3 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['form_type'] = 'date_popup';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value2']['default_date'] = 'now';
   /* Filterkriterie: Indhold: Committee (field_os2web_meetings_committee) */
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['id'] = 'field_os2web_meetings_committee_tid';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['table'] = 'field_data_field_os2web_meetings_committee';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['field'] = 'field_os2web_meetings_committee_tid';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['value'] = array(
-    388 => '388',
+    10974 => '10974',
+    10976 => '10976',
+    10982 => '10982',
+    10983 => '10983',
+    10984 => '10984',
+    10985 => '10985',
+    10986 => '10986',
+    10987 => '10987',
+    10988 => '10988',
+    10989 => '10989',
+    10990 => '10990',
+    10991 => '10991',
+    10992 => '10992',
+    10993 => '10993',
+    10994 => '10994',
+    10969 => '10969',
+    10966 => '10966',
+    10968 => '10968',
+    10995 => '10995',
+    10996 => '10996',
+    10975 => '10975',
+    10997 => '10997',
+    10972 => '10972',
   );
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['exposed'] = TRUE;
@@ -2303,11 +2353,11 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    3 => 0,
     6 => 0,
     4 => 0,
-    5 => 0,
     7 => 0,
+    3 => 0,
+    5 => 0,
   );
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['reduce_duplicates'] = TRUE;
@@ -2326,7 +2376,11 @@ return TRUE;
   $handler = $view->new_display('block', 'Kommende', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
@@ -2413,12 +2467,17 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['table'] = 'field_data_field_os2web_meetings_date';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['field'] = 'field_os2web_meetings_date_value';
   $handler->display->display_options['filters']['field_os2web_meetings_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_os2web_meetings_date_value']['default_date'] = 'now';
 
   /* Display: Seneste */
   $handler = $view->new_display('block', 'Seneste', 'block_2');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '3600';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '3600';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
