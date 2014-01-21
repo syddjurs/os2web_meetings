@@ -53,6 +53,7 @@ projects[entityreference][version] = "1.0"
 
 projects[autocomplete_deluxe][subdir] = "contrib"
 projects[autocomplete_deluxe][version] = "2.0-beta2"
+projects[autocomplete_deluxe][patch][] = "http://drupal.org/files/autocomplete_deluxe-fix_truncated_terms-beta2-1754164-13.patch"
 
 projects[better_exposed_filters][subdir] = "contrib"
 projects[better_exposed_filters][version] = "3.0-beta3"
