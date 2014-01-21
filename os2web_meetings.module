@@ -30,8 +30,8 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add a little js to make the calendar icons clickable.
     $cal_icon = url(drupal_get_path('theme', variable_get('theme_default', NULL)) . "/images/cal.png");
     $datepicker = '
-      
-      
+
+
       (function ($) {
         Drupal.behaviors.os2web_meetings = {
           attach: function(context, settings) {
@@ -203,6 +203,26 @@ function _os2web_meetings_strip_words($text) {
   }
   else {
     return FALSE;
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ * When meetings are upgraded to an "Referat", add the node to the Subscription
+ * Queue again. This way any subscribers will get notified on the update.
+ * See module os2web_subscription.
+ */
+function os2web_meetings_node_update($node) {
+  if (function_exists('os2web_subscription_add_to_queue') &&
+      $node->type === 'os2web_meetings_meeting' &&
+      $node->field_os2web_meetings_type[LANGUAGE_NONE][0]['value'] === 'Referat') {
+
+    $enabled_node_types = os2web_subscription_get_node_types();
+    if (in_array($node->type, $enabled_node_types)) {
+      // If the meetings category is enabled, add it to the queue.
+      os2web_subscription_add_to_queue($node->nid, $node->type);
+    }
   }
 }
 
