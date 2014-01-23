@@ -756,6 +756,7 @@ function os2web_meetings_field_default_field_instances() {
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
         'content_taxonomy_autocomplete_new_terms' => 'allow',
+        'content_taxonomy_opt_groups' => FALSE,
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
