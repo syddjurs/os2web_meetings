@@ -266,7 +266,7 @@ function os2web_meetings_os2web_subscription_categories() {
     $subscription_type_array = array();
     $types = taxonomy_get_tree($vocabulary->vid);
     foreach ($types as $type) {
-      $subscription_type_array[] = 'os2web_meetings_meeting-type_' . $type->tid;
+      $subscription_type_array['os2web_meetings_meeting-type_' . $type->tid] = 'os2web_meetings_meeting-type_' . $type->tid;
 
       // If there are no title for the meeting type, use the name of the committee.
       if (!variable_get('os2web_subscription_title_os2web_meetings_meeting-type_' . $type->tid, FALSE)) {
