@@ -57,6 +57,22 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
       'weight' => 5)
     );
   }
+
+  if ($form['#id'] === 'os2web-subscription-settings-form') {
+    $form['os2web_subscription_os2web_meetings_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Enabled node types for Subscriptions'),
+      '#description' => t('Choose which content types should be enabled for subscribers to get notified of.'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form['os2web_subscription_os2web_meetings_settings']['os2web_meetings_subscription_max_age'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Maximum age in days of a meeting when sending a email on reimport etc. default 10 days.'),
+      '#default_value' => variable_get('os2web_meetings_subscription_max_age', 10),
+      '#element_validate' => array('element_validate_integer_positive'),
+    );
+  }
 }
 
 /**
@@ -214,13 +230,7 @@ function _os2web_meetings_strip_words($text) {
  * See module os2web_subscription.
  */
 function os2web_meetings_node_insert($node) {
-  if ($node->status == 1 && function_exists('os2web_subscription_add_to_queue')) {
-
-    $meeting_type = field_get_items('node', $node, 'field_os2web_meetings_committee');
-    if (!empty($meeting_type[0]['tid'])) {
-      os2web_subscription_add_to_queue($node->nid, 'os2web_meetings_meeting-type_' . $meeting_type[0]['tid']);
-    }
-  }
+  _os2web_meetings_os2web_subscription_add($node);
 }
 
 /**
@@ -231,19 +241,37 @@ function os2web_meetings_node_insert($node) {
  * See module os2web_subscription.
  */
 function os2web_meetings_node_update($node) {
-  if (function_exists('os2web_subscription_add_to_queue')) {
-    $field_meetings_type = field_get_items('node', $node, 'field_os2web_meetings_type');
-    if ($node->type === 'os2web_meetings_meeting' &&
-        $field_meetings_type[0]['value'] === 'Referat') {
+  if ($node->status == 1 &&
+      $node->type === 'os2web_meetings_meeting' &&
+      function_exists('os2web_subscription_add_to_queue')) {
 
-      // Add it to the master meeting type queue.
+    $field_meetings_type = field_get_items('node', $node, 'field_os2web_meetings_type');
+    if ($field_meetings_type[0]['value'] === 'Referat') {
+      _os2web_meetings_os2web_subscription_add($node);
+    }
+  }
+}
+
+/**
+ * Helper function to add a meeting to the subscription queue.
+ */
+function _os2web_meetings_os2web_subscription_add($node) {
+  if ($node->status == 1 &&
+      $node->type === 'os2web_meetings_meeting' &&
+      function_exists('os2web_subscription_add_to_queue')) {
+
+    $dates = field_get_items('node', $node, 'field_os2web_meetings_date');
+    $date = array_shift($dates);
+    $date = new DateTime($date['value']);
+    // Only add to subscription queue if meeting date is younger than xx days from now.
+    if ($date->diff(new DateTime('now'))->days < variable_get('os2web_meetings_subscription_max_age', 10)) {
+            // Add it to the master meeting type queue.
       $enabled_node_types = os2web_subscription_get_node_types();
       if (in_array($node->type, $enabled_node_types)) {
         // If the meetings category is enabled, add it to the queue.
         os2web_subscription_add_to_queue($node->nid, $node->type);
       }
 
-      // Add it to the minor committee type queue.
       $meeting_type = field_get_items('node', $node, 'field_os2web_meetings_committee');
       if (!empty($meeting_type[0]['tid'])) {
         os2web_subscription_add_to_queue($node->nid, 'os2web_meetings_meeting-type_' . $meeting_type[0]['tid']);
