@@ -277,9 +277,9 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '21600';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
   $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
@@ -406,7 +406,7 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_meetings_meeting' => 'os2web_meetings_meeting',
   );
-  /* Filterkriterie: Global: Combine fields filter */
+  /* Filterkriterie: Global: Kombinér felter filter */
   $handler->display->display_options['filters']['combine']['id'] = 'combine';
   $handler->display->display_options['filters']['combine']['table'] = 'views';
   $handler->display->display_options['filters']['combine']['field'] = 'combine';
@@ -2218,7 +2218,7 @@ print("<div class=\\"indicator-has-notes\\"></div>");
   $handler->display->display_options['header']['view']['table'] = 'views';
   $handler->display->display_options['header']['view']['field'] = 'view';
   $handler->display->display_options['header']['view']['view_to_insert'] = 'os2web_meetings_view_search:block_3';
-  /* Overskrift: Global: Unfiltered text */
+  /* Overskrift: Global: Ufiltreret tekst */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
@@ -2324,26 +2324,17 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['value'] = array(
     10974 => '10974',
     10976 => '10976',
-    10982 => '10982',
     10983 => '10983',
     10984 => '10984',
-    10985 => '10985',
-    10986 => '10986',
-    10987 => '10987',
-    10988 => '10988',
     10989 => '10989',
     10990 => '10990',
-    10991 => '10991',
     10992 => '10992',
-    10993 => '10993',
-    10994 => '10994',
-    10969 => '10969',
-    10966 => '10966',
-    10968 => '10968',
-    10995 => '10995',
+    16254 => '16254',
+    16256 => '16256',
+    16258 => '16258',
+    16257 => '16257',
     10996 => '10996',
     10975 => '10975',
-    10997 => '10997',
     10972 => '10972',
   );
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['group'] = 1;
@@ -2625,7 +2616,6 @@ return TRUE;
       'empty_column' => 0,
     ),
   );
-
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
@@ -2729,25 +2719,44 @@ return TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['table'] = 'field_data_field_os2web_meetings_committee';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['field'] = 'field_os2web_meetings_committee_tid';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['value'] = array(
-    25574 => '25574',
-    25579 => '25579',
-    25572 => '25572',
-    25571 => '25571',
-    25581 => '25581',
-    25585 => '25585',
-    25582 => '25582',
-    25575 => '25575',
-    25576 => '25576',
-    25578 => '25578',
-    25584 => '25584',
-    25573 => '25573',
-    25577 => '25577',
+    10974 => '10974',
+    16213 => '16213',
+    10982 => '10982',
+    10976 => '10976',
+    10983 => '10983',
+    10984 => '10984',
+    10985 => '10985',
+    10986 => '10986',
+    10987 => '10987',
+    10988 => '10988',
+    10989 => '10989',
+    10990 => '10990',
+    10991 => '10991',
+    10992 => '10992',
+    10993 => '10993',
+    10969 => '10969',
+    10966 => '10966',
+    10968 => '10968',
+    10995 => '10995',
+    10996 => '10996',
+    16212 => '16212',
+    10975 => '10975',
+    10972 => '10972',
   );
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator_id'] = 'field_os2web_meetings_committee_tid_op';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['operator'] = 'field_os2web_meetings_committee_tid_op';
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['identifier'] = 'os2web_meetings_tax_committee';
+  $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    7 => 0,
+    3 => 0,
+    5 => 0,
+  );
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_os2web_meetings_committee_tid']['type'] = 'select';
@@ -2862,7 +2871,6 @@ return TRUE;
     t('Seneste'),
     t('Seneste møder med publicerede referater'),
     t('Avanceret soegning'),
-    t('Indhold entity refereret fra field_os2web_meetings_bullets'),
     t('Blok 3'),
     t('Rediger'),
     t('Fjern'),
