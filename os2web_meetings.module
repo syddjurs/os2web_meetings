@@ -57,22 +57,6 @@ function os2web_meetings_form_views_exposed_form_alter(&$form, &$form_state) {
       'weight' => 5)
     );
   }
-
-  if ($form['#id'] === 'os2web-subscription-settings-form') {
-    $form['os2web_subscription_os2web_meetings_settings'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Enabled node types for Subscriptions'),
-      '#description' => t('Choose which content types should be enabled for subscribers to get notified of.'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-    );
-    $form['os2web_subscription_os2web_meetings_settings']['os2web_meetings_subscription_max_age'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Maximum age in days of a meeting when sending a email on reimport etc. default 10 days.'),
-      '#default_value' => variable_get('os2web_meetings_subscription_max_age', 10),
-      '#element_validate' => array('element_validate_integer_positive'),
-    );
-  }
 }
 
 /**
@@ -333,6 +317,26 @@ function os2web_meetings_page_alter(&$page) {
     if (!empty($subscription_types)) {
       $page['content'][] = drupal_get_form('os2web_subscription_add_subscription_form', $subscription_types, t('Subscribe to meetings'));
     }
+  }
+}
+
+/**
+ * Implements hook_FORM_alter();
+ */
+function os2web_meetings_form_alter(&$form, &$form_state) {
+  if ($form['#id'] === 'os2web-subscription-settings-form') {
+    $form['os2web_subscription_os2web_meetings_settings'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('OS2web Meetings integration'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form['os2web_subscription_os2web_meetings_settings']['os2web_meetings_subscription_max_age'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Maximum age in days of a meeting when sending a email on reimport etc. default 10 days.'),
+      '#default_value' => variable_get('os2web_meetings_subscription_max_age', 10),
+      '#element_validate' => array('element_validate_integer_positive'),
+    );
   }
 }
 
